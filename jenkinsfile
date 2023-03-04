@@ -1,5 +1,5 @@
 pipeline {
-    agent { windows { java'${JAVA_HOME}' } }
+    agent any
     stages {
         stage('build') {
             steps {
