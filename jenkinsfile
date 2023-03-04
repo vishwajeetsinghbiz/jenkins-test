@@ -1,10 +1,12 @@
 pipeline {
-    agent {'${JAVA_HOME}'
+    agent any
+    tools {
+    jdk '${JAVA_HOME}'
     }
     stages {
         stage('build') {
             steps {
-                sh 'mvn clean install -Dskiptests'
+                sh 'mvn clean install'
             }
         }
     }
